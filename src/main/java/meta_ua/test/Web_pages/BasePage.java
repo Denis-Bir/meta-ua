@@ -65,6 +65,17 @@ public class BasePage {
         element.click();
     }
 
+    public boolean IsElementPresent(WebElement element){
+        this.WaitForElementVisibility(element);
+        return element.isDisplayed();
+    }
+
+    public boolean IsElementEnabled(WebElement element){
+        this.WaitForElementVisibility(element);
+        return element.isEnabled();
+    }
+
+
     public WebDriver getWebDriverChoose(String browserName){
         switch (browserName){
             case "chrome":

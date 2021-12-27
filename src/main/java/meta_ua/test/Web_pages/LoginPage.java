@@ -11,7 +11,7 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//body/div[1]/div[1]/article[1]/form[1]/div[2]/input[1]")
     public WebElement password;
 
-    @FindBy(xpath = "//*[@id=\"login-form\"]/button")
+    @FindBy(xpath = "//*[@id='login-form']/button")
     public WebElement confirmButton;
 
     @FindBy(xpath = "//input[@id='login-lifetime']")
@@ -30,5 +30,13 @@ public class LoginPage extends BasePage {
 
     public void ClickConfirmButton(){
         ClickElement(confirmButton);
+    }
+
+    public boolean IsLoginButtonPresent(){
+        return IsElementPresent(confirmButton);
+    }
+
+    public boolean IsLoginButtonEnabled(){
+        return IsElementEnabled(confirmButton);
     }
 }

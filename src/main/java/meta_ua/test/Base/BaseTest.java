@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
@@ -15,6 +16,11 @@ public class BaseTest {
         driver = WebDriverConfig.getBaseChromeDriver();
     }
 
+    @AfterTest
+    public void tearDown() {
+        driver.close();
+        driver.quit();
+    }
 
     public WebDriver getDriver() {
         return this.driver;
