@@ -32,6 +32,11 @@ public class LoginPage extends BasePage {
         ClickElement(confirmButton);
     }
 
+    public Object ClickConfirmButtonReturn(){
+      ClickElement(confirmButton);
+       return null;
+    }
+
     public boolean IsLoginButtonPresent(){
         return IsElementPresent(confirmButton);
     }
