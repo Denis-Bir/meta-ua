@@ -18,22 +18,22 @@ public class RegistrationForm extends BasePage {
     @FindBy (xpath = "//*[@id=\"regForm\"]/div/div[6]/input")
     public WebElement surname;
 
-    @FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[10]/select[1]")
+    @FindBy (xpath = "//div[10]/select[1]")
     public WebElement selectDay;
 
-    @FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[11]/select[1]")
+    @FindBy (xpath = "//div[11]/select[1]")
     public WebElement selectMonth;
 
-    @FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[12]/select[1]")
+    @FindBy (xpath = "//div[12]/select[1]")
     public WebElement selectYear;
 
-    @FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[18]/input[1]")
+    @FindBy (xpath = "//div[18]/input[1]")
     public WebElement setPassword;
 
-    @FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[19]/input[1]")
+    @FindBy (xpath = "//div[18]/input[1]")
     public WebElement repeatPassword;
 
-    @FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[23]/input[1]")
+    @FindBy (xpath = "//div[19]/input[1]")
     public WebElement phoneNumber;
 
     @FindBy (xpath = "//button[contains(text(),'Підтвердити телефон')]")
