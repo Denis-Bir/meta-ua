@@ -52,11 +52,8 @@ public class RegistrationForm extends BasePage {
     public WebElement registerButton;
 
     public void dropDownSelectDay (int index){ dropdownSelect(selectDay, index);}
-
     public void dropdownSelectMonth (String value){ dropdownSelectMonth(selectMonth, value);}
-
     public void dropDownSelectYear (int index){ dropdownSelect(selectYear, index);}
-
     public void EnterUserLogin(String value) {
         WriteTextToInputField(inputNewEmail, value, false);
     }
