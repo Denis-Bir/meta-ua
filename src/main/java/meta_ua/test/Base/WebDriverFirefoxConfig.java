@@ -9,7 +9,7 @@ public class WebDriverFirefoxConfig {
 
     private static WebDriver driverFirefox;
 
-    public static WebDriver getWebDriverFirefoxConfig(){
+    public static WebDriver getBaseFirefoxDriver(){
 
         System.setProperty("webDriver.firefox.FirefoxDriver", "C:\\Users\\Den\\Desktop\\WebDriversSelenium\\geckodriver-v0.30.0-win64\\geckodriver.exe");
         driverFirefox=new FirefoxDriver();

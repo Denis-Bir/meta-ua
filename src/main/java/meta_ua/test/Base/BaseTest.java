@@ -13,7 +13,8 @@ public class BaseTest {
 
     @BeforeTest
     public void setup() {
-        driver = WebDriverConfig.getBaseChromeDriver();
+
+        driver = DriverFactory.createInstance("chrome");
     }
 
     @AfterTest

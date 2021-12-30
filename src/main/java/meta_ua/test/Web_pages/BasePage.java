@@ -5,8 +5,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -17,7 +15,7 @@ public class BasePage {
 
     public WebDriver driver;
 
-    public BasePage(){
+    public BasePage() {
         this.driver = WebDriverConfig.getBaseChromeDriver();
         PageFactory.initElements(driver, this);
     }
@@ -30,7 +28,7 @@ public class BasePage {
         wait.until((webDriver -> {
             try {
                 return element.isDisplayed();
-            } catch (NoSuchElementException e){
+            } catch (NoSuchElementException e) {
                 return false;
             }
         }));
@@ -41,19 +39,19 @@ public class BasePage {
         element.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
         element.sendKeys(value);
 
-        if(doHitEnterKey) {
+        if (doHitEnterKey) {
             element.sendKeys(Keys.chord(Keys.ENTER));
         }
     }
 
-    public void dropdownSelect (WebElement element, int index){
+    public void dropdownSelect(WebElement element, int index) {
         this.WaitForElementVisibility(element);
         Select select = new Select(element);
         select.selectByIndex(index);
 
     }
 
-    public void dropdownSelectMonth (WebElement element, String value){
+    public void dropdownSelectMonth(WebElement element, String value) {
         this.WaitForElementVisibility(element);
         Select select = new Select(element);
         select.selectByVisibleText(value);
@@ -65,25 +63,20 @@ public class BasePage {
         element.click();
     }
 
-    public boolean IsElementPresent(WebElement element){
+    public boolean IsElementPresent(WebElement element) {
         this.WaitForElementVisibility(element);
         return element.isDisplayed();
     }
 
-    public boolean IsElementEnabled(WebElement element){
+    public boolean IsElementEnabled(WebElement element) {
         this.WaitForElementVisibility(element);
         return element.isEnabled();
     }
 
 
-    public WebDriver getWebDriverChoose(String browserName){
-        switch (browserName){
-            case "chrome":
-                return new ChromeDriver();
-            case "firefox":
-                return new FirefoxDriver();
-            default:
-                throw new RuntimeException("Incorrect BrowserName");
-        }
     }
-}
+
+
+
+
+

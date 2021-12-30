@@ -16,7 +16,6 @@ public class TestLoginForm extends BaseTest {
     @Severity(SeverityLevel.MINOR)
     public void testLoginForm () {
             getDriver().navigate().to("https://passport.meta.ua/login/");
-
             LoginPage login_page = new LoginPage();
             login_page.EnterUsername("denfortest@meta.ua");
             login_page.EnterPassword("VjzJcyjdf1980_");
