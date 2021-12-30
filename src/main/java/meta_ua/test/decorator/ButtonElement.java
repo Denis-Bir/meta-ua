@@ -1,8 +1,9 @@
 package meta_ua.test.decorator;
 
+import meta_ua.test.Base.CustomElement;
 import org.openqa.selenium.WebElement;
 
-public class ButtonElement extends CustomElement{
+public class ButtonElement extends CustomElement {
 
     public ButtonElement(WebElement webElement) {
         super(webElement);

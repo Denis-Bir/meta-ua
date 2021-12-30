@@ -1,7 +1,8 @@
 package meta_ua.test.Base;
 
 import org.openqa.selenium.WebElement;
-import sun.util.calendar.BaseCalendar;
+
+import java.util.Date;
 
 public abstract class CustomElement {
     private WebElement webElement;
