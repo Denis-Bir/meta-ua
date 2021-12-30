@@ -49,7 +49,8 @@ public class RegistrationForm extends BasePage {
     public WebElement licenceCheckBox;
 
     @FindBy (xpath = "//input[@id='register_btn']")
-    public WebElement registerButton;
+
+    WebElement ButtonElement;
 
     public void dropDownSelectDay (int index){ dropdownSelect(selectDay, index);}
     public void dropdownSelectMonth (String value){ dropdownSelectMonth(selectMonth, value);}
