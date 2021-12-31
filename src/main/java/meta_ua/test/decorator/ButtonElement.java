@@ -1,17 +1,15 @@
 package meta_ua.test.decorator;
 
-import meta_ua.test.Base.CustomElement;
 import org.openqa.selenium.WebElement;
 
-public class ButtonElement extends CustomElement {
+public class ButtonElement extends Element {
 
     public ButtonElement(WebElement webElement) {
         super(webElement);
     }
 
-    public void click() {
-        System.out.println("click");
-        getWebElement().click();
+    public void perform_click() {
+       webElement.click();
     }
 }
 
