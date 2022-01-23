@@ -1,5 +1,8 @@
 package tests_web_pages.test_registration_rorm.positive_test;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import meta_ua.test.base.BaseTest;
 import meta_ua.test.web_pages.RegistrationForm;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,16 +13,18 @@ import java.util.ArrayList;
 public class Test_licenceAgreement extends BaseTest {
 
     @Test
+    @Description("Test licence agreement")
+    @Severity(SeverityLevel.MINOR)
 
     public void test_licences_page () {
 
         //BaseTest.getWebDriverChoose("Chrome");
         getDriver().navigate().to("https://passport.meta.ua/reg/");
         RegistrationForm test_licence = new RegistrationForm(getDriver());
-
+        test_licence.licenceLink.click();
         //check license agreement
         ArrayList<String> newTab = new ArrayList<String>(getDriver().getWindowHandles());
-        test_licence.licenceLink.click();
+
         String oldTab = getDriver().getWindowHandle();
         newTab.remove(oldTab);
 
