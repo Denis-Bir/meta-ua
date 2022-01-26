@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 
-
 public class TestJavaAPI {
 
     @Test
@@ -38,7 +37,7 @@ public class TestJavaAPI {
                 .when().post()
                 .then().extract().as(CreateUserResponse.class);
 
-        AssertThat(rs)
+        Assert.that(rs)
                 .isNotNull()
                 .exctrating(CreateUserResponse::getName)
                 .isEqualTo(rq.getName());
