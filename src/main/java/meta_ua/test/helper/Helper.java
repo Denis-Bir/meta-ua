@@ -25,7 +25,7 @@ public final class  Helper {
         return isSorted;
     }
 
-    // The method could be applied only for ASKII strings :)
+    // The method could be applied only for ASKII strings :) Remake by collection.
     public static  boolean isDescendingSort(List<WebElement> elementsSorted) {
         Boolean isSorted = true;
         String previousValue = elementsSorted.get(0).getText();

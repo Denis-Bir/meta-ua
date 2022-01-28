@@ -1,7 +1,12 @@
 package Singlton;
 
 
+import org.testng.log4testng.Logger;
+
 public class SingltonThread {
+
+    private final Logger LOGGER = Logger.getLogger(this.getClass());
+    private final static Logger LOGGER2 = Logger.getLogger(SingltonThread.class);
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -14,7 +19,7 @@ public class SingltonThread {
         for (int i = 0; i < SIZE; i++) {
             t[i].join();
         }
-        System.out.println(Singlton.counter);
+        LOGGER2.info(Singlton.counter);
 
     }
 
@@ -27,7 +32,7 @@ public class SingltonThread {
 
     static class Singlton {
         static int counter = 0;
-        private static volatile Singlton instance = new Singlton();
+        private static volatile Singlton instance;
 
         private Singlton() {
             counter++;
